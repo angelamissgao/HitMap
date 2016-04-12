@@ -1,0 +1,65 @@
+Hangman Server and Client in Python
+
+Instructions:
+
+To run locally without Google App Engine (GAE):
+- Download and install MySQL
+http://dev.mysql.com/downloads/mysql/
+- Start server and connect to mysql client
+mysql -u root -p
+- Create database
+create database hangman
+- Create tables
+Run SQL commands under database/ to create required tables.
+- Install CherryPy
+pip install cherrypy
+- Install Jinja2
+pip install Jinja2
+- Install MySQLdb
+pip install MySQL-python
+- Run server
+python server/server.py
+- Install gflags
+pip install python-gflags
+- Run client
+python client/client.py
+It will play the game for 10 times and return the result.
+
+To run locally with Google App Engine (GAE):
+- Install GAE by downloading from the official website
+- Install CherryPy and other libraries
+Mac:
+pip install --install-option="--prefix=" -t lib -r requirements.txt
+Linux:
+pip install -t lib -r requirements.txt
+- Run server
+dev_appserver.py .
+- Run client
+python client/client.py
+It will play the game for 10 times and return the result.
+
+To run server on Google App Engine (GAE):
+- Install GAE by downloading from the official website
+- Install CherryPy and other libraries
+Mac:
+pip install --install-option="--prefix=" -t lib -r requirements.txt
+Linux:
+pip install -t lib -r requirements.txt
+- Setup your GAE, and create a project
+- Push code to GAE
+appcfg.py -A <YOUR_PROJECT_ID_> update .
+- Change client.py to point to the GAE server
+- Run client
+python client/client.py
+It will play the game for 10 times and return the result.
+
+References:
+- MySQL:
+- CherryPy: http://www.cherrypy.org/
+- Jinja2: http://jinja.pocoo.org/docs/dev/
+- Bootstrap: http://getbootstrap.com/
+- Google App Engine: https://cloud.google.com/appengine/docs
+- Google App Engine - python Hello World: https://cloud.google.com/appengine/docs/python/
+- Google App Engine - python MySQL: https://cloud.google.com/appengine/docs/python/cloud-sql/
+- gflags: https://github.com/gflags/python-gflags/blob/master/gflags.py
+
