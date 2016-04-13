@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>truelearn.com</title>
+          <!--bootstramp import-->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+          <style>
+          .center {
+              margin: auto;
+              width: 60%;
+              padding: 10px;
+          }
+          .site-logo {
+            transition: color 200ms cubic-bezier(.55, 0, .1, 1);
+            color: #30acff;
+            font-size: 3rem;
+          }
+          header {
+            padding-left: 20px;
+          }
+          </style>
+
+    </head>
+    <body>
+      <!-- /header -->
+      <header id="header">
+      <a class="site-logo" href="#">
+               TrueLearn Mini
+      </a>
+      <ul class="nav nav-tabs">
+      <li role="presentation" class="active"><a href="#">Calculation Report</a></li>
+      <li role="presentation"><a href="http://www.truelearn.com/">TrueLearn Home</a></li>
+      <li role="presentation"><a href="http://www.truelearn.com/about/">About</a></li>
+      </ul>
+    </header>
+
+    <!-- Calculation Panel -->
+      <div class = "center">
+        <br>
+        <div class="panel panel-success">
+        <div class="panel-heading"><h3 class="panel-title">Input your data:</h3></div>
+          <div class="panel-body">
+            <p> Note: input multiple datas split by ','</p>
+            <p>Example:1,2,3,4,5 </p>
+
+            <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">numbers:</span>
+            <input type="text" class="form-control" placeholder="number1" aria-describedby="basic-addon1" id="nums">
+            </div>
+            <br>
+
+            <button type="button" class="btn btn-default" style = "float: right" onclick = "calculate();">submit</button>
+          </div>
+        </div>
+
+        <div class="panel panel-info" style = "display : none" id = "reportPanel">
+        <div class="panel-heading"><h3 class="panel-title">Calculation Report:</h3></div>
+
+        <!-- Report Table -->
+        <table class="table">
+          <thead> <tr> <th> Statistic </th> <th>Result</th> </tr> </thead>
+          <tbody id = "report">
+          </tbody>
+        </table>
+      </div>
+      <p>Author: Angela Gao @ CMU</p>
+
+      </div>
+    </body>
+
+    <script>
+      function calculate() {
+        var inputs = $("#nums").val();
+        var inputsArray = inputs.split(',').map(Number);
+        console.log(inputsArray);
+
+        var mean = calMean(inputsArray);
+        console.log("mean is " + mean);
+
+        var median = calMedian(inputsArray);
+        console.log("median is " + median);
+
+        var mode = calMode(inputsArray);
+        console.log("mode is " + mode);
+
+        var stdDev = standardDeviation(inputsArray);
+        console.log("standard Deviation is " + stdDev);
+        $("#reportPanel").show();
+
+        $("#report")
+        .html( "<tr> <th> Mean </th> <td>" + mean + "</td></tr> <tr><th> Median </th> <td>" + median + "</td></tr> <tr><th> Mode </th> <td>" + mode + "</td></tr> <tr><th> Standard Deviation </th> <td>" + stdDev + "</td></tr>");
+
+      }
+
+      function calMean(arr) {
+        if(arr.length == 0) {
+          return 0;
+        }
+        var sum = 0;
+        for(var i = 0; i < arr.length; i++) {
+          sum += arr[i];
+        }
+        return sum/arr.length;
+      }
+
+      function calMedian(arr) {
+        if(arr.length == 0) {
+          return 0;
+        }
+        arr.sort( function (a, b) {return a - b});
+        var mid = Math.floor(arr.length / 2);
+        if(arr.length %2 !== 0) {
+          return arr[mid];
+        } else {
+          return (arr[mid-1] + arr[mid]) / 2;
+        }
+      }
+
+      function calMode(arr) {
+        if(arr.length == 0) {
+          return 0;
+        }
+        var map = {};
+        var res = arr[0], max_count = 1;
+        for(var i = 0; i < arr.length; i++) {
+          var key = arr[i];
+          if(map[key] == null) {
+            map[key] = 1;
+          } else {
+            map[key]++;
+          }
+
+          if(map[key] > max_count) {
+            res = key;
+            max_count = map[key];
+          }
+        }
+        return res;
+      } 
+
+      function standardDeviation(arr){
+        var avg = calMean(arr);
+        
+        var squareDiffs = arr.map(function(value){
+          var diff = value - avg;
+          var sqrDiff = diff * diff;
+          return sqrDiff;
+        });
+        
+        var avgSquareDiff = calMean(squareDiffs);
+
+        var stdDev = Math.sqrt(avgSquareDiff);
+        return stdDev;
+      }
+
+    </script>
+</html>

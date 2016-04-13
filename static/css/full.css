@@ -1,0 +1,265 @@
+/*!
+ * Start Bootstrap - Full HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+ html {
+ 	position: relative;
+ 	height: 100%;
+ }
+
+ body {
+
+ 	font-family: 'Lato', sans-serif;
+ 	margin-bottom: 40px;
+ 	background-color: transparent;
+ 	height:100%;
+ }
+
+
+ body > .container {
+ 	padding: 60px 15px 0;
+ }
+
+ a:hover {text-decoration: none !important; color: #9B9B9B}
+
+
+
+ /* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
+
+ .full {
+ 	background: url("../images/bg.jpg") no-repeat center center;
+ 	-webkit-background-size: cover;
+ 	-moz-background-size: cover;
+ 	background-size: cover;
+ 	-o-background-size: cover;
+ }
+
+/* Header
+-------------------------------------------------- */
+.navbar.navbar-default {
+	background: rgba(74, 74, 74, .35);
+	box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+	border: none;
+	height: 60px;
+}
+
+.navbar-default .navbar-nav>li>a {
+	font-size: 14px;
+	color: #CBD4D9;
+	padding-top: 20px;
+	padding-bottom: 20px
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+	color: #9B9B9B	
+}
+
+
+.navbar-nav {
+	float: right;
+	height: 60px;
+}
+
+.navbar-brand > img {
+	width: 80px;
+}
+
+.navbar-default .navbar-header .navbar-toggle {border-color: transparent;}
+.navbar-default .navbar-toggle .icon-bar {background-color: #fff;}
+
+
+/* Body
+-------------------------------------------------- */
+
+.search_form {
+	font-size: 50px;
+	color: #9B9B9B;
+	line-height: 62px;
+}
+
+.nl-form input, .nl-form select, .nl-form button.search-button {
+	background: #FF4C61;
+	border-radius: 100px;
+	width: 160px;
+	height: 60px;
+	font-size: 24px;
+	color: #FEFCF1;
+}
+.nl-form button.search-button a {color: #FEFCF1;}
+
+.rwd-break {display: none;}
+
+input#daterange {
+	border-radius: 0px;
+	width: auto;
+	font-size: 30px;
+}
+
+.dropdown-menu.daterangepicker {
+	border-radius: 0;
+}
+
+.daterangepicker .input-mini.active, .daterangepicker .input-mini {
+	border-radius: 0;
+}
+
+.daterangepicker td.active {background-color: #0D395D;}
+.daterangepicker .input-mini.active {border-color: #0D395D }
+
+/*.daterangepicker .calendar-table {
+	background-color: #0D395D;
+}
+*/
+
+/* Sticky footer styles
+-------------------------------------------------- */
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 40px;
+	background: #0D395D;
+}
+
+.footer > .container > p {
+	text-align: right;
+}
+
+.footer .container .text-muted {color: #CBD4D9; font-size: 13px;}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+
+.container .text-muted {
+	margin: 10px 0;
+	padding-right: 15px;
+}
+
+
+/* Results
+-------------------------------------------------- */
+body.results {
+	background-color: #EEEEEE;
+}
+
+.results > .navbar.navbar-default {
+	background-image: linear-gradient(-90deg, #43CEA2 -60%, #0B2F54 95%);
+}
+
+.container.results-container {
+	width: 100%;
+	padding: 60px 0 33px 0;
+	height: 99%;
+}
+
+.results .row, .map {
+	height: 100%;
+	padding-right: 0;
+}
+
+.results-filter {
+	width: 51%;
+	height: 50px;
+	background-color: #eeeeee;
+	border-bottom: 1px solid #CBD4D9;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    margin-top: 60px !important;
+    padding: 17px 40px 17px 35px;
+
+}
+
+.results-filter {
+	font-size: 14px;
+	color: #565D5F;
+}
+
+.results-col {
+	padding-right: 15px;
+	padding-left: 30px;
+	padding-top: 70px;
+}
+
+.results .thumbnail {
+	padding: 0;
+	border-radius: 0;
+	border: none;
+	height: 120px;
+}
+
+.results .thumbnail img.hotel-photo {
+	width: 100%;
+	height: 100%;
+}
+
+.img-container {
+	width: 30%;
+    margin: 0 auto;
+    overflow:hidden;
+    position: relative;
+    height: 120px;
+    float: left;
+}
+
+.caption {
+	float: right;
+	width: 70%;
+}
+
+.thumbnail .caption {padding: 15px;}
+
+.caption p {
+	font-size: 13px;
+	color: #565D5F;
+}
+
+.caption p.price {
+	font-size: 14px;
+	color: #009FF1;
+	line-height: 18px;
+	text-align: right;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.caption p.link { bottom: 0; margin-bottom: 15px;}
+.caption img.source-logo { width: 15px; float: right;}
+
+.caption p.address {margin-bottom: 15px;}
+.caption p.reviews { font-size: 12px; color: #9B9B9B; margin-bottom: 0;}
+
+.results-list {
+	height: 100%;
+	overflow-y: scroll;
+	padding-left: 0;
+	padding-right: 0
+}
+
+.results h4 {
+	font-family: AvenirNext-Bold;
+	font-size: 16px;
+	color: #0D395D;
+}
+
+.card-1 {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.2s ease-in-out;
+}
+
+.card-1:hover {
+  box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.23);
+}
+
+.results .row {margin-right: 0;}
+
+
+
+
+
+
+
+
+

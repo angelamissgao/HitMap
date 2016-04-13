@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>hitmap: results</title>
+
+    <!-- Include Date Range Picker -->
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/static/css/full.css" rel="stylesheet">
+    <link href="/static/css/component.css" rel="stylesheet">
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body class="results">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" alt="Hitmap"> 
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="search_form">
+                    <form id="nl-form" class="nl-form">
+                        I am travelling to <input id="nlinput" type="text" value="" placeholder="San Francisco" data-subline="Currently only San Francisco"/> with
+                        <select>
+                            <option value="1" selected>family</option>
+                            <option value="2">friend(s)</option>
+                            <option value="3">sweetheart</option>
+                            <option value="4">colleague</option>
+                        </select>
+                        for 
+                        <select>
+                            <option value="1" selected>sightseeing</option>
+                            <option value="2">shopping</option>
+                            <option value="3">have fun</option>
+                            <option value="4">romantic trip</option>
+                            <option value="2">business</option>
+                        </select>
+                        on <input type="text" id="daterange" placeholder="these dates"/> <button class="search-button" type="submit">Search</button>
+                        <div class="nl-overlay"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Content -->
+    <div class="container results-container">
+        <div class="row">
+            <div class="col-sm-6 col-xs-12 map">
+                <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJIQBpAG2ahYAR_6128GcTUEo&key=AIzaSyAyAvzpTYqd2gP-b_5-S46XS-_XJhhlQBM" allowfullscreen></iframe>
+            </div>
+
+            <div class="col-sm-6 col-xs-12 results-list">
+                <div class="results-filter">
+                    <div style="float: left; width: 50%;">
+                        <p>33 hotels found</p>
+                    </div>
+                    <div style="float: right; width: 50%; text-align: right;">
+                        <p><span style="color: #9b9b9b">Sort by </span>relevance</p>
+                    </div>
+                </div>
+                <div class="results-col">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="thumbnail card-1">
+                                <div class="img-container">
+                                    <img class="hotel-photo" src="images/hotel2.png">
+                                </div>
+                                <div class="caption">
+                                    <div style="float: left; width: 80%;">
+                                        <h4>Omni San Francisco Hotel</h4>
+                                        <p class="address">500 California St, San Francisco, CA 94104</p>
+                                        <p class="reviews">6,335 reviews</p>
+                                    </div>
+                                    <div style="float: right; width: 20%; text-align: right" >
+                                        <p class="price" style="float: right;">$132/night</p>
+                                        <p class="link"><a href="">Hotel Page </a></p>
+                                        <img class="source-logo" src="images/expedia-logo.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="thumbnail card-1">
+                                <div class="img-container">
+                                    <img class="hotel-photo" src="images/hotel2.png">
+                                </div>
+                                <div class="caption">
+                                    <div style="float: left; width: 80%;">
+                                        <h4>Omni San Francisco Hotel</h4>
+                                        <p class="address">500 California St, San Francisco, CA 94104</p>
+                                        <p class="reviews">6,335 reviews</p>
+                                    </div>
+                                    <div style="float: right; width: 20%; text-align: right" >
+                                        <p class="price" style="float: right;">$132/night</p>
+                                        <p class="link"><a href="">Hotel Page </a></p>
+                                        <img class="source-logo" src="images/expedia-logo.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="thumbnail card-1">
+                                <div class="img-container">
+                                    <img class="hotel-photo" src="images/hotel2.png">
+                                </div>
+                                <div class="caption">
+                                    <div style="float: left; width: 80%;">
+                                        <h4>Omni San Francisco Hotel</h4>
+                                        <p class="address">500 California St, San Francisco, CA 94104</p>
+                                        <p class="reviews">6,335 reviews</p>
+                                    </div>
+                                    <div style="float: right; width: 20%; text-align: right" >
+                                        <p class="price" style="float: right;">$132/night</p>
+                                        <p class="link"><a href="">Hotel Page </a></p>
+                                        <img class="source-logo" src="images/expedia-logo.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="thumbnail card-1">
+                                <div class="img-container">
+                                    <img class="hotel-photo" src="images/hotel2.png">
+                                </div>
+                                <div class="caption">
+                                    <div style="float: left; width: 80%;">
+                                        <h4>Omni San Francisco Hotel</h4>
+                                        <p class="address">500 California St, San Francisco, CA 94104</p>
+                                        <p class="reviews">6,335 reviews</p>
+                                    </div>
+                                    <div style="float: right; width: 20%; text-align: right" >
+                                        <p class="price" style="float: right;">$132/night</p>
+                                        <p class="link"><a href="">Hotel Page </a></p>
+                                        <img class="source-logo" src="images/expedia-logo.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="thumbnail card-1">
+                                <div class="img-container">
+                                    <img class="hotel-photo" src="images/hotel2.png">
+                                </div>
+                                <div class="caption">
+                                    <div style="float: left; width: 80%;">
+                                        <h4>Omni San Francisco Hotel</h4>
+                                        <p class="address">500 California St, San Francisco, CA 94104</p>
+                                        <p class="reviews">6,335 reviews</p>
+                                    </div>
+                                    <div style="float: right; width: 20%; text-align: right" >
+                                        <p class="price" style="float: right;">$132/night</p>
+                                        <p class="link"><a href="">Hotel Page </a></p>
+                                        <img class="source-logo" src="images/expedia-logo.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="thumbnail card-1">
+                                <div class="img-container">
+                                    <img class="hotel-photo" src="images/hotel2.png">
+                                </div>
+                                <div class="caption">
+                                    <div style="float: left; width: 80%;">
+                                        <h4>Omni San Francisco Hotel</h4>
+                                        <p class="address">500 California St, San Francisco, CA 94104</p>
+                                        <p class="reviews">6,335 reviews</p>
+                                    </div>
+                                    <div style="float: right; width: 20%; text-align: right" >
+                                        <p class="price" style="float: right;">$132/night</p>
+                                        <p class="link"><a href="">Hotel Page </a></p>
+                                        <img class="source-logo" src="images/expedia-logo.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="thumbnail card-1">
+                                <div class="img-container">
+                                    <img class="hotel-photo" src="images/hotel2.png">
+                                </div>
+                                <div class="caption">
+                                    <div style="float: left; width: 80%;">
+                                        <h4>Omni San Francisco Hotel</h4>
+                                        <p class="address">500 California St, San Francisco, CA 94104</p>
+                                        <p class="reviews">6,335 reviews</p>
+                                    </div>
+                                    <div style="float: right; width: 20%; text-align: right" >
+                                        <p class="price" style="float: right;">$132/night</p>
+                                        <p class="link"><a href="">Hotel Page </a></p>
+                                        <img class="source-logo" src="images/expedia-logo.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="thumbnail card-1">
+                                <div class="img-container">
+                                    <img class="hotel-photo" src="images/hotel2.png">
+                                </div>
+                                <div class="caption">
+                                    <div style="float: left; width: 80%;">
+                                        <h4>Omni San Francisco Hotel</h4>
+                                        <p class="address">500 California St, San Francisco, CA 94104</p>
+                                        <p class="reviews">6,335 reviews</p>
+                                    </div>
+                                    <div style="float: right; width: 20%; text-align: right" >
+                                        <p class="price" style="float: right;">$132/night</p>
+                                        <p class="link"><a href="">Hotel Page </a></p>
+                                        <img class="source-logo" src="images/expedia-logo.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="thumbnail card-1">
+                                <div class="img-container">
+                                    <img class="hotel-photo" src="images/hotel2.png">
+                                </div>
+                                <div class="caption">
+                                    <div style="float: left; width: 80%;">
+                                        <h4>Omni San Francisco Hotel</h4>
+                                        <p class="address">500 California St, San Francisco, CA 94104</p>
+                                        <p class="reviews">6,335 reviews</p>
+                                    </div>
+                                    <div style="float: right; width: 20%; text-align: right" >
+                                        <p class="price" style="float: right;">$132/night</p>
+                                        <p class="link"><a href="">Hotel Page </a></p>
+                                        <img class="source-logo" src="images/expedia-logo.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">Hitmap uses data from <a href="http://expedia.com"><img style="width: 55px;" src="images/expedia.png" alt=""></a> and <a href="https://data.sfgov.org" ><span style="color:#6DBCE2">SF Open Data</span></a></p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="/static/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- Include Required Prerequisites -->
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('#daterange').daterangepicker({
+               "drops": "down",
+               "autoApply": true
+           });
+        });
+    </script>
+
+
+    <!-- Natural Language Form JavaScript -->
+    <script src="/static/js/nlform.js"></script>
+    <script>
+        var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+    </script>
+
+</body>
+
+</html>
