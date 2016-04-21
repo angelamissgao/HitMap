@@ -12,15 +12,10 @@ from rpy2.robjects import r
 from rpy2.robjects.packages import importr
 print "import R"
 
-tats = importr("stats")
-base = importr('base')
-my_data = r['read.csv']('../database/crime2015.csv')
+# tats = importr("stats")
+# base = importr('base')
+# my_data = r['read.csv']('../database/crime2015.csv')
 
-
-# my_model = stats.lm("TOTAL ~ .", data=my_data)
-
-# app = Flask(__name__)
-# CORS(app)
 
 # Build Jinja2 environment specifying where to load template files.
 _JINJA_ENVIRONMENT = jinja2.Environment(
@@ -54,6 +49,20 @@ class HangmanServer(object):
   def index(self):
     template = _JINJA_ENVIRONMENT.get_template('index.html')
     return template.render()
+
+  @cherrypy.expose
+  @cherrypy.tools.json_out()
+  @cherrypy.tools.json_in()  
+  def search(self):
+    """
+    search for the result with four parameters
+
+    """
+    result = {"operation": "request", "result": "success"}
+    input_json = cherrypy.request.json
+    value = input_json["my_key"]
+    print "-------------> here!"
+    return result
 
 config = {
   # Set up the directory for static files.
