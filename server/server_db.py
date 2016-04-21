@@ -7,6 +7,21 @@ import uuid
 import hangman_database
 import hangman_game
 
+# import r package
+from rpy2.robjects import r
+from rpy2.robjects.packages import importr
+print "import R"
+
+tats = importr("stats")
+base = importr('base')
+my_data = r['read.csv']('../database/crime2015.csv')
+
+
+# my_model = stats.lm("TOTAL ~ .", data=my_data)
+
+# app = Flask(__name__)
+# CORS(app)
+
 # Build Jinja2 environment specifying where to load template files.
 _JINJA_ENVIRONMENT = jinja2.Environment(
     loader=jinja2.FileSystemLoader(
