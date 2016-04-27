@@ -68,14 +68,14 @@
                 <div class="search_form">
                     <form id="nl-form" class="nl-form">
                         I am travelling to <input id="nlinput" type="text" value="" placeholder="San Francisco" data-subline="Currently only San Francisco"/> <br>with
-                        <select>
+                        <select id="companion">
                             <option value="1" selected>family</option>
                             <option value="2">friend(s)</option>
                             <option value="3">sweetheart</option>
                             <option value="4">colleague</option>
                         </select>
                         <br class="rwd-break">for 
-                        <select>
+                        <select id="goal">
                             <option value="1" selected>sightseeing</option>
                             <option value="2">shopping</option>
                             <option value="3">have fun</option>
@@ -84,7 +84,7 @@
                         </select>
                         <br>on <input type="text" id="daterange" placeholder="these dates"/>
                         <div class="nl-submit-wrap">
-                            <button href="results.html" class="search-button" type="submit"><a href="results.html">Search</a></button>
+                            <button class="search-button" type="submit" id="search_button" value="search" onclick='return false'>Search</button>
                         </div>
                         <div class="nl-overlay"></div>
                     </form>
@@ -117,6 +117,34 @@
                 "autoApply": true
             });
         });
+    </script>
+
+    <!-- Post Request -->
+    <script>
+        var myObject = { "my_key": "my_value" };
+        $(document).ready(function() {
+            $('#search_button').click(function() {
+                 console.log("button clicked");
+                $.ajax({
+                    type: "POST",
+                    url: 'search',
+                    contentType: 'application/json',
+                    data: JSON.stringify(myObject),
+                    dataType:'JSON',
+                    // data:{
+                    //     destination: $("#nlinput").val(),
+                    //     companion: $("#companion").change(),
+                    //     goal: $("#goal").val(),
+                    //     date:$("#daterange").val()
+                    // },
+                    success: function()
+                    {
+                        alert("success");
+                    }  
+                });
+            });
+        });
+        
     </script>
 
 
