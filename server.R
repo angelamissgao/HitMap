@@ -70,6 +70,9 @@ shinyServer(function(input, output, session) {
         overlayGroups = c("Attractions"),
         options = layersControlOptions(collapsed = FALSE)
       )
+    
+    # get customer input data
+   
   })
 
   
